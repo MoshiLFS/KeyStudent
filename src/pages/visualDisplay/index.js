@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Header from '../../components/header'
+import VisualDisplayMain from './components/visualDisplayMain'
 
 class VisualDisplay extends Component {
     state = {  };
@@ -8,8 +9,8 @@ class VisualDisplay extends Component {
     render() {
         return (
             <>
-                <Header/>
-                this is VisualDisplay page.
+                <Header title='重点关注学生考试统计图'/>
+                <VisualDisplayMain/>
             </>
         );
     }

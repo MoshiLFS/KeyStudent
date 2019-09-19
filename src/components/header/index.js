@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import style from './index.less'
 
-const Header = () => {
+class Header extends Component {
+  state = {  };
+
+  render() {
+    console.log('props.............',this.props);
+    let {title} = this.props; 
   return (
     <div className={style.header}>
-        重点学生日周考成绩录入管理系统
+        {title}
     </div>
   );
-};
+  }
+}
 
-Header.propTypes = {
-};
-
-export default Header;
+export default Header; 

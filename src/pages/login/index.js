@@ -10,7 +10,7 @@ class Login extends Component {
         console.log(this.props);
         return (
             <>
-                <Header/>
+                <Header title='重点学生日周考成绩录入管理系统'/>
                 <LoginMain goOtherPage={()=>{
                     this.props.history.push('/visualDisplay')
                 }}/>

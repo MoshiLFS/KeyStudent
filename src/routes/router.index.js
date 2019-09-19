@@ -10,5 +10,5 @@ export default [
     {path: '/allAchievements', component :AllAchievements }, // 所有成绩
     {path: '/deansPerspective', component :DeansPerspective }, // 院长视图
     {path: '/visualDisplay', component :VisualDisplay }, //可视化视图
-    {path: '/', redirect: '/login'}
+    {path: '/', redirect: '/visualDisplay'}
 ]
