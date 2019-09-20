@@ -84,7 +84,7 @@ class AllAchievements extends Component {
           };
         return (
             <div>
-                <Header />
+                <Header title='xx学生日周考成绩统计表'/>
                 <div className={styles.box}>
                     <div className={styles.nav}>
                         <div className={styles.left}>
