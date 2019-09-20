@@ -8,7 +8,7 @@ class VisualDisplayMain extends Component {
     state = {  };
 
     render() {
-        
+
         return (
             <div className={style.visualDisplayMain}>
                 <VisualDisplayHeader {...this.props}/>
