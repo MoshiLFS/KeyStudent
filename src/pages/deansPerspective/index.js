@@ -8,7 +8,7 @@ class DeansPerspective extends Component {
     render() {
         return (
             <>
-                <Header/>
+                <Header title='xxx学生日周考'/>
                 this is DeansPerspective page.
             </>
         );
