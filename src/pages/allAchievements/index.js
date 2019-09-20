@@ -8,7 +8,7 @@ class AllAchievements extends Component {
     state = {};
     
     render() {
-        const columns = [
+        const columns = [     
             {
               title: '日期',
               dataIndex: 'name',
