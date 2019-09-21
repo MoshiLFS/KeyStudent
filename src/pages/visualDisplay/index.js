@@ -10,7 +10,7 @@ class VisualDisplay extends Component {
         return (
             <>
                 <Header title='重点关注学生考试统计图'/>
-                <VisualDisplayMain/>
+                <VisualDisplayMain classArr ={['1703C','1703E','1703E']} isAdd = 'true'/>
             </>
         );
     }
