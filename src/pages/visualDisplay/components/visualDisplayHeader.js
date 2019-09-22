@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Switch,Modal, Button } from 'antd';
+import{connect } from 'dva'
 import style from '../index.less'
 
 
 
-function onChange(checked) {
-    console.log(`switch to ${checked}`);
-  }
+
 
 class VisualDisplayHeader extends Component {
     state = {
@@ -17,6 +16,12 @@ class VisualDisplayHeader extends Component {
         confirmLoading: false,
         isOK : false
     };
+
+    onChange=(checked)=>{
+      // console.log(this);
+      // console.log(`switch to ${checked}`);
+      this.props.abc();
+    }
 
     showModal = () => {
         this.setState({
@@ -88,7 +93,7 @@ class VisualDisplayHeader extends Component {
 
                     }
                     <div className={style.mbutton}>
-                        <Switch defaultChecked onChange={onChange} /> 柱状图/线图
+                        <Switch defaultChecked onChange={this.onChange.bind(this)} /> 柱状图/线图
                     </div>
                 </div>
                 
@@ -98,4 +103,15 @@ class VisualDisplayHeader extends Component {
     }
 }
 
-export default VisualDisplayHeader;
+export default connect((state)=>{
+  console.log(state);
+  return {
+
+  }
+},(dispatch)=>{
+  return {
+    abc(){
+      dispatch({type:'isBar'})
+    },
+  }
+})(VisualDisplayHeader);

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Header from '../../components/header'
+import { connect} from 'dva'
 import VisualDisplayMain from './components/visualDisplayMain'
 
 class VisualDisplay extends Component {
@@ -14,6 +15,24 @@ class VisualDisplay extends Component {
             </>
         );
     }
+
+    componentDidMount(){
+        console.log(this.props,'2----------------------------');
+    }
 }
 
-export default VisualDisplay;
+function mapStateProps(state){
+    return {
+
+    }
+}
+
+function mapDispatchProps(dispatch){
+    return {
+        abc(){
+            console.log(123);
+        }
+    }
+}
+
+export default connect(mapStateProps,mapDispatchProps)(VisualDisplay);

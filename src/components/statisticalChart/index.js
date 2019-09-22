@@ -8,7 +8,8 @@ let onChange=(checked)=>{
 
 let allmyChart = null;
 const President=props=>{
-    console.log('props!!!!!!!!!!!!!!',props);
+    console.log('props!!!!!!!!!!!!!!',props.data);
+    let data = {...props.data};
         const option = {
             title: {
                 text: 'xxx同学的日周考成绩统计图',
@@ -52,21 +53,9 @@ const President=props=>{
             yAxis: {
                 type: 'value'
             },
-            series: [
-                {
-                    name: '技能',
-                    type: 'line',
-                    stack: '总量',
-                    data: [23, 70, 21, 25, 76.7, 36.5, 61, 37, 20, 9, 22, 10, 90]
-                },
-                {
-                    name: '理论',
-                    type: 'line',
-                    stack: '总量',
-                    data: [26, 70, 26, 25, 76.7, 82.2, 61, 37, 20, 9, 22, 13, 56]
-                }
-            ]
+            series: props.data,
         };
+        
     useEffect(() => {
         var myChart = echarts.init(document.getElementById('line'));
         // var myChart1 = echarts.init(document.getElementById('myChart'));
